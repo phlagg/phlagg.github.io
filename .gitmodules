@@ -1,0 +1,3 @@
+[submodule "short-circuited"]
+	path = themes/short-circuited
+	url = https://github.com/phlagg/short-circuited.git

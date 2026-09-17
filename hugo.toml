@@ -1,0 +1,86 @@
+title = "Profile"
+baseURL = "https://phlagg.github.io/"
+theme = "short-circuited"
+themesDir = "themes"
+locale = 'en-us'
+
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
+copyright = "Copyright &copy; {year}"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[pagination]
+  pagerSize = 10
+
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+
+[params]
+  author = "Michael Woods"
+  descriptionLines = [
+    "A dark, minimal, terminal-inspired Hugo theme.",
+    "Built for personal blogs, projects, and technical portfolios.",
+  ]
+  tagline = "I write on the [blog](/posts/), share [projects](/projects/), and keep a simple personal website."
+  blogPageSize = 5
+  contentDir = "content"
+
+[params.toc]
+  enabled = true
+  ordered = false
+  startLevel = 1
+  endLevel = 3
+
+[params.footer]
+  text = 'rewired // made with ♥ and [Hugo](https://gohugo.io/)'
+  prompt = "user@rewired:~$"
+
+[[menus.main]]
+  name = "home"
+  pageRef = "/"
+  weight = 10
+
+[[menus.main]]
+  name = "blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[menus.main]]
+  name = "projects"
+  pageRef = "/projects"
+  weight = 30
+
+[[menus.main]]
+  name = "about"
+  pageRef = "/about"
+  weight = 40
+
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/phlagg"
+  icon = "fa-brands fa-github"
+
+[[params.social]]
+  name = "Website"
+  url = "https://rigle.dev"
+  icon = "fa-solid fa-globe"
+
+[[params.subnodes]]
+  name = "github.com/phlagg"
+  url = "https://github.com/phlagg"
+  description = "Code and projects"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
