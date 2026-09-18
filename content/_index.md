@@ -1,10 +1,16 @@
----
-title: "Home"
-description: "Rewired theme demo."
----
++++
+title = "guest@dev:~$"
++++
 
-# Rewired
+Welcome to the `hugo-theme-tokyo-terminal`. This is a retro, developer-focused terminal theme utilizing the Tokyo Night color scheme and JetBrains Mono.
 
-A dark, minimal, terminal-inspired Hugo theme.
+### Features
+- Native terminal prompts
+- Tokyo Night Hex codes
+- Blinking cursor
+- Fully responsive
 
-This demo tests the homepage, navigation, blog, projects, taxonomies, and base styles.
+Install this theme by running:
+```bash
+git submodule add https://github.com/your-username/hugo-theme-tokyo-terminal.git themes/tokyo-terminal
+```

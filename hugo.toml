@@ -1,86 +1,70 @@
-title = "Profile"
-baseURL = "https://phlagg.github.io/"
-theme = "short-circuited"
-themesDir = "themes"
-locale = 'en-us'
+baseurl = "phlagg.github.io"
+locale = "en-us"
+title = "michael@portfolio:~$"
+theme = "hugo-nosferatu-terminal-theme"
 
-# Enter a copyright notice to display in the site footer.
-# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = "Copyright &copy; {year}"
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-
-[pagination]
-  pagerSize = 10
-
-
-[caches]
-  [caches.images]
-    dir = ":cacheDir/images"
-
+[markup.goldmark.renderer]
+  unsafe = true
 
 [params]
-  author = "Michael Woods"
-  descriptionLines = [
-    "A dark, minimal, terminal-inspired Hugo theme.",
-    "Built for personal blogs, projects, and technical portfolios.",
-  ]
-  tagline = "I write on the [blog](/posts/), share [projects](/projects/), and keep a simple personal website."
-  blogPageSize = 5
-  contentDir = "content"
+  prompt = "michael@portfolio:~$"
 
-[params.toc]
-  enabled = true
-  ordered = false
-  startLevel = 1
-  endLevel = 3
+  [params.dashboard]
+    enabled = true
+    ascii_art = """
+  __  ____      __               __   _       __                __
+   /  |/  (_)____/ /_  ____ ____  / /  | |     / /___  ____  ____/ /____
+  / /|_/ / / ___/ __ \\/ __ `/ _ \\/ /   | | /| / / __ \\/ __ \\/ __  / ___/
+ / /  / / / /__/ / / / /_/ /  __/ /    | |/ |/ / /_/ / /_/ / /_/ (__  )
+/_/  /_/_/\\___/_/ /_/\\__,_/\\___/_/     |__/|__/\\____/\\____/\\__,_/____/"""
 
-[params.footer]
-  text = 'rewired // made with ♥ and [Hugo](https://gohugo.io/)'
-  prompt = "user@rewired:~$"
+#     ascii_art = """
+# _____ _     _           _    _ _ _           _
+#    |     |_|___| |_ ___ ___| |  | | | |___ ___ _| |___
+#     | | | | |  _|   | .'| -_| |  | | | | . | . | . |_ -|
+#     |_|_|_|_|___|_|_|__,|___|_|  |_____|___|___|___|___|"""
 
-[[menus.main]]
-  name = "home"
-  pageRef = "/"
-  weight = 10
+#     ascii_art = """
+# __ __  _       _              _   _ _ _              _
+#     |  \\  \\<_> ___ | |_  ___  ___ | | | | | | ___  ___  _| | ___
+#     |     || |/ | '| . |<_> |/ ._>| | | | | |/ . \\/ . \\/ . |<_-<
+#     |_|_|_||_|\\_|_.|_|_|<___|\\___.|_| |__/_/ \\___/\\___/\\___|/__/"""
 
-[[menus.main]]
-  name = "blog"
-  pageRef = "/posts"
-  weight = 20
+    ascii_color = "#bb9af7"
+    title = "Firmware & Embedded Software Engineer"
+    subtitle = "Building robust embedded systems, supported by hands‑on hardware design and integration."
+    hint = "Press the highlighted keys to navigate."
 
-[[menus.main]]
-  name = "projects"
-  pageRef = "/projects"
-  weight = 30
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/phlagg"
 
-[[menus.main]]
-  name = "about"
-  pageRef = "/about"
-  weight = 40
-
-[[params.social]]
-  name = "GitHub"
-  url = "https://github.com/phlagg"
-  icon = "fa-brands fa-github"
-
-[[params.social]]
-  name = "Website"
-  url = "https://rigle.dev"
-  icon = "fa-solid fa-globe"
-
-[[params.subnodes]]
-  name = "github.com/phlagg"
-  url = "https://github.com/phlagg"
-  description = "Code and projects"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    [menu.main.params]
+      shortcut = "a"
+      icon = ""
+  [[menu.main]]
+    identifier = "experience"
+    name = "Experience"
+    url = "/experience"
+    [menu.main.params]
+      shortcut = "e"
+      icon = "󱔗"
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects"
+    [menu.main.params]
+      shortcut = "p"
+      icon = ""
+  [[menu.main]]
+    identifier = "skills"
+    name = "Skills"
+    url = "/skills"
+    [menu.main.params]
+      shortcut = "s"
+      icon = ""
